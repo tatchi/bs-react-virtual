@@ -9,8 +9,6 @@ let make = () => {
       estimateSize: React.useCallback0(_ => 35),
     });
 
-  // List.map(Js.log, rowVirtualizer.virtualItems);
-
   <div
     ref={ReactDOMRe.Ref.domRef(parentRef)}
     style={ReactDOMRe.Style.make(
@@ -27,23 +25,22 @@ let make = () => {
         (),
       )}>
       {rowVirtualizer.virtualItems
-       ->Belt.Array.map(virtualRow
-           //  key={string_of_int(virtualRow.index)}
-           =>
-             <div
-               style={ReactDOMRe.Style.make(
-                 ~position="absolute",
-                 ~top="0px",
-                 ~left="0px",
-                 ~width="100%",
-                 ~height={string_of_int(virtualRow.size) ++ "px"},
-                 ~transform=
-                   {"translateY(" ++ string_of_int(virtualRow.start) ++ "px)"},
-                 (),
-               )}>
-               {React.string("Row " ++ string_of_int(virtualRow.index))}
-             </div>
-           )
+       ->Belt.Array.map(virtualRow =>
+           <div
+             key={string_of_int(virtualRow.index)}
+             style={ReactDOMRe.Style.make(
+               ~position="absolute",
+               ~top="0px",
+               ~left="0px",
+               ~width="100%",
+               ~height={string_of_int(virtualRow.size) ++ "px"},
+               ~transform=
+                 {"translateY(" ++ string_of_int(virtualRow.start) ++ "px)"},
+               (),
+             )}>
+             {React.string("Row " ++ string_of_int(virtualRow.index))}
+           </div>
+         )
        ->ReasonReact.array}
     </div>
   </div>;

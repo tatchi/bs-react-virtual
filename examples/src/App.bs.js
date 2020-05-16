@@ -28,6 +28,7 @@ function App(Props) {
                   }
                 }, Belt_Array.map(rowVirtualizer.virtualItems, (function (virtualRow) {
                         return React.createElement("div", {
+                                    key: String(virtualRow.index),
                                     style: {
                                       height: String(virtualRow.size) + "px",
                                       left: "0px",
