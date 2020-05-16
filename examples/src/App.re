@@ -52,6 +52,7 @@ let make = () => {
         {rowVirtualizer.virtualItems
          ->Belt.Array.map(virtualRow =>
              <div
+               ref={ReactDOMRe.Ref.domRef(virtualRow.measureRef)}
                key={string_of_int(virtualRow.index)}
                style={ReactDOMRe.Style.make(
                  ~position="absolute",

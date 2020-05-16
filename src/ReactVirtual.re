@@ -40,6 +40,7 @@ type virtualRow = {
   size: int,
   [@bs.as "end"]
   end_: int,
+  measureRef: React.ref(Js.Nullable.t(Dom.element)),
 };
 type scrollOptions = {align: Align.t};
 
@@ -59,6 +60,5 @@ external scrollToIndex:
 
 [@bs.send]
 external scrollToOffset:
-  (rowVirtualizer, ~offset: int, ~options: scrollOptions=?, unit) =>
-  unit =
+  (rowVirtualizer, ~offset: int, ~options: scrollOptions=?, unit) => unit =
   "scrollToOffset";
