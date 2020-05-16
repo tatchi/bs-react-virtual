@@ -1,0 +1,11 @@
+.DS_Store
+.merlin
+.bsb.lock
+.cache
+.parcel-cache
+/dist/
+/build/
+npm-debug.log
+/lib/bs/
+/node_modules/
+/bundleOutput/

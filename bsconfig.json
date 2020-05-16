@@ -1,0 +1,31 @@
+{
+  "name": "@tatchi/bs-react-virtual",
+  "reason": {
+    "react-jsx": 3
+  },
+  "version": "0.1.0",
+  "bsc-flags": ["-bs-super-errors"],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "sources": [
+    {
+      "dir": "src"
+    },
+    {
+      "dir": "examples",
+      "subdirs": ["src"],
+      "type": "dev"
+    }
+  ],
+  "suffix": ".bs.js",
+  "bs-dependencies": ["reason-react"],
+  "bs-dev-dependencies": [],
+  "warnings": {
+    "error": "+101"
+  },
+  "refmt": 3
+}
