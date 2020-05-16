@@ -13,7 +13,14 @@ let make = () => {
     );
 
   <div>
-    <button onClick={_ => rowVirtualizer.scrollToIndex(~index=0)}>
+    <button
+      onClick={_ =>
+        rowVirtualizer->ReactVirtual.scrollToIndex(
+          ~index=0,
+          ~options={align: "auto"},
+          (),
+        )
+      }>
       {React.string("ScrollToTop")}
     </button>
     <div
@@ -45,12 +52,7 @@ let make = () => {
                    {"translateY(" ++ string_of_int(virtualRow.start) ++ "px)"},
                  (),
                )}>
-               {React.string(
-                  "Row "
-                  ++ string_of_int(virtualRow.index)
-                  ++ " "
-                  ++ string_of_int(virtualRow.end_),
-                )}
+               {React.string("Row " ++ string_of_int(virtualRow.index))}
              </div>
            )
          ->ReasonReact.array}
