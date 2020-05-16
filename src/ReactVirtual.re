@@ -24,9 +24,11 @@ type virtualRow = {
   end_: int,
 };
 
+type scrollToIndexOptions = {align: string};
 type returnValue = {
   virtualItems: Js.Array.t(virtualRow),
   totalSize: int,
+  scrollToIndex: (~index: int) => unit,
 };
 
 [@bs.module "react-virtual"]
