@@ -37,7 +37,7 @@ function App(Props) {
                                       width: "100%",
                                       transform: "translateY(" + (String(virtualRow.start) + "px)")
                                     }
-                                  }, "Row " + String(virtualRow.index));
+                                  }, "Row " + (String(virtualRow.index) + (" " + String(virtualRow.end))));
                       }))));
 }
 

@@ -3,11 +3,14 @@ let make = () => {
   let parentRef = React.useRef(Js.Nullable.null);
 
   let rowVirtualizer =
-    ReactVirtual.useVirtual({
-      size: 10000,
-      parentRef,
-      estimateSize: React.useCallback0(_ => 35),
-    });
+    ReactVirtual.useVirtual(
+      ReactVirtual.options(
+        ~size=10000,
+        ~parentRef,
+        ~estimateSize=React.useCallback0(_ => 35),
+        (),
+      ),
+    );
 
   <div
     ref={ReactDOMRe.Ref.domRef(parentRef)}
@@ -38,7 +41,12 @@ let make = () => {
                  {"translateY(" ++ string_of_int(virtualRow.start) ++ "px)"},
                (),
              )}>
-             {React.string("Row " ++ string_of_int(virtualRow.index))}
+             {React.string(
+                "Row "
+                ++ string_of_int(virtualRow.index)
+                ++ " "
+                ++ string_of_int(virtualRow.end_),
+              )}
            </div>
          )
        ->ReasonReact.array}

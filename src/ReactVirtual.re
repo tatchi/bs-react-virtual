@@ -1,13 +1,26 @@
+// type options = {
+//   size: int,
+//   parentRef: React.ref(Js.Nullable.t(Dom.element)),
+//   estimateSize: int => int,
+// };
+
+[@bs.deriving abstract]
 type options = {
   size: int,
   parentRef: React.ref(Js.Nullable.t(Dom.element)),
   estimateSize: int => int,
+  [@bs.optional]
+  overscan: int,
+  [@bs.optional]
+  horizontal: bool,
+  // [@bs.optional] scrollToFn: bool,
 };
 
 type virtualRow = {
   index: int,
   start: int,
   size: int,
+  [@bs.as "end"]
   end_: int,
 };
 
