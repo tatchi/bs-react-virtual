@@ -1,3 +1,26 @@
+module Align: {
+  type t = pri string;
+
+  [@bs.inline "start"]
+  let start: t;
+  [@bs.inline "center"]
+  let center: t;
+  [@bs.inline "end"]
+  let end_: t;
+  [@bs.inline "auto"]
+  let auto: t;
+} = {
+  type t = string;
+  [@bs.inline]
+  let start = "start";
+  [@bs.inline]
+  let center = "center";
+  [@bs.inline]
+  let end_ = "end";
+  [@bs.inline]
+  let auto = "auto";
+};
+
 [@bs.deriving abstract]
 type options = {
   size: int,
@@ -7,6 +30,8 @@ type options = {
   overscan: int,
   [@bs.optional]
   horizontal: bool,
+  [@bs.optional]
+  scrollToFn: (int, int => unit) => unit,
 };
 
 type virtualRow = {
@@ -16,26 +41,24 @@ type virtualRow = {
   [@bs.as "end"]
   end_: int,
 };
-type scrollToIndexOptions = {align: string};
+type scrollOptions = {align: Align.t};
 
-type returnValue = {
+type rowVirtualizer = {
   virtualItems: array(virtualRow),
   totalSize: int,
-  // scrollToIndex:
-  //   (~index: int, ~options: option(scrollToIndexOptions)) => unit,
+  scrollToIndex: (~index: int, ~options: option(scrollOptions)) => unit,
 };
 
 [@bs.module "react-virtual"]
-external useVirtual: options => returnValue = "useVirtual";
+external useVirtual: options => rowVirtualizer = "useVirtual";
 
 [@bs.send]
 external scrollToIndex:
-  (returnValue, ~index: int, ~options: scrollToIndexOptions=?, unit) => unit =
+  (rowVirtualizer, ~index: int, ~options: scrollOptions=?, unit) => unit =
   "scrollToIndex";
 
-[@bs.module "./index.js"]
-external scrollToIndex2:
-  (~index: int, ~options: option(scrollToIndexOptions)) => unit =
-  "scrollToIndex";
-
-let res = scrollToIndex2(~index=1, ~options=None);
+[@bs.send]
+external scrollToOffset:
+  (rowVirtualizer, ~offset: int, ~options: scrollOptions=?, unit) =>
+  unit =
+  "scrollToOffset";

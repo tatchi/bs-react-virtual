@@ -8,6 +8,7 @@ let make = () => {
         ~size=10000,
         ~parentRef,
         ~estimateSize=React.useCallback0(_ => 35),
+        ~scrollToFn=(offset, defaultScrollToFn) => defaultScrollToFn(offset),
         (),
       ),
     );
@@ -17,11 +18,21 @@ let make = () => {
       onClick={_ =>
         rowVirtualizer->ReactVirtual.scrollToIndex(
           ~index=0,
-          ~options={align: "auto"},
+          ~options={align: ReactVirtual.Align.auto},
           (),
         )
       }>
-      {React.string("ScrollToTop")}
+      {React.string("ScrollToIndex")}
+    </button>
+    <button
+      onClick={_ =>
+        rowVirtualizer->ReactVirtual.scrollToOffset(
+          ~offset=100,
+          ~options={align: ReactVirtual.Align.auto},
+          (),
+        )
+      }>
+      {React.string("ScrollToOffset")}
     </button>
     <div
       ref={ReactDOMRe.Ref.domRef(parentRef)}
