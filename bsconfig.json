@@ -16,7 +16,7 @@
       "dir": "src"
     },
     {
-      "dir": "examples",
+      "dir": "example",
       "subdirs": ["src"],
       "type": "dev"
     }
