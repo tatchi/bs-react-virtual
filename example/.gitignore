@@ -7,5 +7,5 @@
 /build/
 npm-debug.log
 /lib/bs/
-/node_modules/
+node_modules
 /bundleOutput/
