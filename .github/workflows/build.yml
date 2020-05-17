@@ -34,7 +34,7 @@ jobs:
     name: Build Example
     runs-on: ubuntu-latest
     env:
-      working-directory: ./examples
+      working-directory: ./example
     strategy:
       matrix:
         node-version: [12.x, 14.x]
