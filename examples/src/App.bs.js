@@ -19,17 +19,13 @@ function App(Props) {
       });
   return React.createElement("div", undefined, React.createElement("button", {
                   onClick: (function (param) {
-                      rowVirtualizer.scrollToIndex(0, {
-                            align: "auto"
-                          });
-                      
+                      return rowVirtualizer.scrollToIndex(0, {
+                                  align: "auto"
+                                });
                     })
                 }, "ScrollToIndex"), React.createElement("button", {
                   onClick: (function (param) {
-                      rowVirtualizer.scrollToOffset(100, {
-                            align: "auto"
-                          });
-                      
+                      return rowVirtualizer.scrollToOffset(100, undefined);
                     })
                 }, "ScrollToOffset"), React.createElement("div", {
                   ref: parentRef,

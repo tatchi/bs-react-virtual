@@ -47,7 +47,8 @@ type scrollOptions = {align: Align.t};
 type rowVirtualizer = {
   virtualItems: array(virtualRow),
   totalSize: int,
-  scrollToIndex: (~index: int, ~options: option(scrollOptions)) => unit,
+  scrollToIndex: (. ~index: int, ~options: option(scrollOptions)) => unit,
+  scrollToOffset: (. ~offset: int, ~options: option(scrollOptions)) => unit,
 };
 
 [@bs.module "react-virtual"]

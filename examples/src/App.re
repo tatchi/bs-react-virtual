@@ -16,21 +16,16 @@ let make = () => {
   <div>
     <button
       onClick={_ =>
-        rowVirtualizer->ReactVirtual.scrollToIndex(
+        rowVirtualizer.scrollToIndex(.
           ~index=0,
-          ~options={align: ReactVirtual.Align.auto},
-          (),
+          ~options=Some({align: ReactVirtual.Align.auto}),
         )
       }>
       {React.string("ScrollToIndex")}
     </button>
     <button
       onClick={_ =>
-        rowVirtualizer->ReactVirtual.scrollToOffset(
-          ~offset=100,
-          ~options={align: ReactVirtual.Align.auto},
-          (),
-        )
+        rowVirtualizer.scrollToOffset(. ~offset=100, ~options=None)
       }>
       {React.string("ScrollToOffset")}
     </button>
