@@ -1051,6 +1051,11 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexer@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -1879,6 +1884,11 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
+node-forge@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.9.0.tgz#d624050edbb44874adca12bb9a52ec63cb782579"
+  integrity sha512-7ASaDa3pD+lJ3WvXFsxekJQelBKRpne+GOVbLbtHYdd7pFspyeuJHnWfLplGf3SwKGbfs/aYl5V/JCIaHVUKKQ==
+
 node-releases@^1.1.53:
   version "1.1.53"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.53.tgz#2d821bfa499ed7c5dffc5e2f28c88e78a08ee3f4"
@@ -2457,10 +2467,10 @@ react-refresh@^0.8.2:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.2.tgz#24bb0858eac92b0d7b0dd561747f0c9fd6c60327"
   integrity sha512-n8GXxo3DwM2KtFEL69DAVhGc4A1THn2qjmfvSo3nze0NLCoPbywazeJPqdp0RdSGLmyhQzeyA+XPXOobbYlkzg==
 
-react-virtual@^2.1.10:
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/react-virtual/-/react-virtual-2.1.10.tgz#77b97421a90f7e89e5fbe07dcda27266bfc0ad7e"
-  integrity sha512-yC5z157oZdBy97B4PAJSzYZ1hXA4/83tqm+dH3bjRxYPAj7SUov1tB3eRZFYvuJTSTkf+PmguD4GvnXglyx3dg==
+react-virtual@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-virtual/-/react-virtual-2.2.0.tgz#bd9d2925a9778d8f12f22b1acacb2bd22069a7eb"
+  integrity sha512-ZiXj6DwHuUT4KRWl4GxkvF+WzQTXRmLn8+fgMbrsHB23NQeH+4rWB9NykzhzqwbZF/c5vzzT2MPcl3N+OgrDaA==
   dependencies:
     "@reach/observe-rect" "^1.1.0"
     "@scarf/scarf" "^1.0.0"
@@ -2532,7 +2542,7 @@ resolve-path@^1.4.0:
     http-errors "~1.6.2"
     path-is-absolute "1.0.1"
 
-resolve@^1.11.0, resolve@^1.14.2, resolve@^1.3.2:
+resolve@^1.11.0, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.3.2:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
   integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
@@ -2600,6 +2610,13 @@ sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+
+selfsigned@^1.10.7:
+  version "1.10.7"
+  resolved "https://registry.yarnpkg.com/selfsigned/-/selfsigned-1.10.7.tgz#da5819fd049d5574f28e88a9bcc6dbc6e6f3906b"
+  integrity sha512-8M3wBCzeWIJnQfl43IKwOmC4H/RAp50S8DF60znzjW5GVqTcSe2vWclt7hmYVPkKPlHWOu5EaWOMZ2Y6W8ZXTA==
+  dependencies:
+    node-forge "0.9.0"
 
 semver@^5.4.1:
   version "5.7.1"
@@ -2933,18 +2950,18 @@ vendors@^1.0.0:
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
 
-vite-plugin-react@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-react/-/vite-plugin-react-1.0.0.tgz#bb618c0960db3d469d974975ac5de2a9882cb229"
-  integrity sha512-TsxdjVxEADn1Y+7rsBCDVbNaz8QipDNhusMnFctA4zFxIXlYm9IxTyZXoapSDWV42LnAn9hii2XLlrv8yR2eiQ==
+vite-plugin-react@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-react/-/vite-plugin-react-1.1.2.tgz#d65a12ad8cc233303955112ba28d45e55011375c"
+  integrity sha512-WDcjOzPgVWp/v+nYty1dQe3ATfW4oKBBsl2o8n5jtrI0qNVK7N2NbLCxTAFo2UybZCvLjzA3ahdshnIK2NYYZA==
   dependencies:
     "@babel/core" "^7.9.6"
     react-refresh "^0.8.2"
 
-vite@^0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-0.16.0.tgz#c27317b66c44685d4cd19c2dd81d7953ac5cad04"
-  integrity sha512-JBgdl2qwfcgGciBYo/duMqjuQEFaH/Fwx5rGeEMIz/DxsaHEjscK8xigYfzvZ+UVnoC+VtmnnTGW5RiP3SCkLg==
+vite@^0.16.10:
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-0.16.10.tgz#38653a0aae0cd0e95a996e6a0f0f2ec6057980a7"
+  integrity sha512-m0U93CX/0klWm4MOYqAz8VNqxfMY6Z5hNgJzt9104BEI5b88gJTmr1g9TDK6DDgNJ6Ypo5CSco7J2hUnJm6vpw==
   dependencies:
     "@babel/parser" "^7.9.4"
     "@rollup/plugin-commonjs" "~11.0.0"
@@ -2958,6 +2975,7 @@ vite@^0.16.0:
     chokidar "^3.3.1"
     cssnano "^4.1.10"
     debug "^4.1.1"
+    dotenv "^8.2.0"
     es-module-lexer "^0.3.18"
     esbuild "^0.3.2"
     etag "^1.8.1"
@@ -2979,9 +2997,11 @@ vite@^0.16.0:
     postcss "^7.0.28"
     postcss-load-config "^2.1.0"
     postcss-modules "^2.0.0"
+    resolve "^1.17.0"
     rollup "^2.7.2"
     rollup-plugin-terser "^5.3.0"
     rollup-plugin-vue "^6.0.0-beta.1"
+    selfsigned "^1.10.7"
     slash "^3.0.0"
     vue "^3.0.0-beta.14"
     ws "^7.2.3"
